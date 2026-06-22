@@ -22,6 +22,9 @@ COPY . .
 # Create storage directories
 RUN mkdir -p /app/storage/uploads /app/storage/chromadb
 
+# Set PYTHONPATH to ensure python finds the local app package first
+ENV PYTHONPATH=/app
+
 # Expose port
 EXPOSE 8000
 

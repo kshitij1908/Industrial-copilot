@@ -79,7 +79,7 @@ export function LoginPage() {
             </div>
 
             <h1 className='text-xl font-bold text-slate-100 text-center leading-tight'>
-              Industrial Knowledge Copilot
+              FactoryMind
             </h1>
             <p className='text-sm text-slate-400 mt-1 text-center'>
               AI-Powered Asset &amp; Operations Brain
@@ -172,7 +172,7 @@ export function LoginPage() {
                   <span>Authenticating...</span>
                 </>
               ) : (
-                'Sign In to Copilot'
+                'Sign In to FactoryMind'
               )}
             </motion.button>
           </form>

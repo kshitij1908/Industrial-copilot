@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import { chatService } from '../services/chatService'
 import type { ChatMessage } from '../types'
 
-const LOCAL_STORAGE_CHAT_KEY = 'industrial_copilot_chat_history'
+const LOCAL_STORAGE_CHAT_KEY = 'factorymind_chat_history'
 
 function loadChatHistory(): ChatMessage[] {
   try {

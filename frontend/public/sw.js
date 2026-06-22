@@ -1,4 +1,4 @@
-const CACHE_NAME = 'industrial-copilot-cache-v1'
+const CACHE_NAME = 'factorymind-cache-v1'
 const ASSETS = [
   '/',
   '/index.html',

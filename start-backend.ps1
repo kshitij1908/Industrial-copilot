@@ -9,7 +9,7 @@
 
 Write-Host ""
 Write-Host "===============================================" -ForegroundColor Cyan
-Write-Host "  Industrial Knowledge Copilot - Setup Script  " -ForegroundColor Cyan
+Write-Host "  FactoryMind - Setup Script                   " -ForegroundColor Cyan
 Write-Host "===============================================" -ForegroundColor Cyan
 Write-Host ""
 

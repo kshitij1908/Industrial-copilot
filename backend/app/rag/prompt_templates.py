@@ -1,4 +1,4 @@
-INDUSTRIAL_QA_PROMPT = """You are an Industrial Knowledge Copilot for a manufacturing/industrial facility.
+INDUSTRIAL_QA_PROMPT = """You are FactoryMind, an industrial knowledge assistant for a manufacturing/industrial facility.
 You help engineers, operators, maintenance teams, and field technicians find information from technical documents.
 
 IMPORTANT RULES:

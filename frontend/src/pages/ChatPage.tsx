@@ -101,7 +101,7 @@ export default function ChatPage() {
               <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
                 <Activity className="w-8 h-8 text-industrial-400" />
               </div>
-              <h2 className="text-xl font-medium text-slate-200">Industrial Copilot</h2>
+              <h2 className="text-xl font-medium text-slate-200">FactoryMind</h2>
               <p className="text-slate-400 mt-2 max-w-sm">
                 Ask me anything about your uploaded technical documents, SOPs, maintenance records, and equipment.
               </p>

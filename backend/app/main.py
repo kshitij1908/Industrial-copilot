@@ -20,7 +20,7 @@ settings = get_settings()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application startup and shutdown lifecycle."""
-    logger.info("Starting Industrial Knowledge Copilot API...")
+    logger.info("Starting FactoryMind API...")
     
     # Initialize database
     await init_db()
@@ -49,6 +49,25 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error(f"Failed to seed default admin user: {e}")
     
+    # Auto-sync: if ChromaDB has vectors but SQLite documents table is empty, re-seed
+    try:
+        from app.vectorstore.store import ChromaVectorStore
+        from app.models.document import Document
+        store = ChromaVectorStore()
+        chroma_count = store._collection.count()
+        async with AsyncSessionLocal() as session:
+            doc_result = await session.execute(select(Document).limit(1))
+            has_docs = doc_result.first() is not None
+        if chroma_count > 0 and not has_docs:
+            logger.warning(
+                f"ChromaDB has {chroma_count} chunks but documents table is empty. "
+                "Triggering document re-sync from docs/ directory..."
+            )
+            from app.startup_seeder import seed_from_docs
+            await seed_from_docs()
+    except Exception as e:
+        logger.warning(f"Startup auto-sync skipped: {e}")
+    
     # Ensure storage directories exist
     os.makedirs(os.path.abspath(settings.upload_dir), exist_ok=True)
     os.makedirs(os.path.abspath(settings.chroma_persist_dir), exist_ok=True)
@@ -60,7 +79,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Industrial Knowledge Copilot API",
+    title="FactoryMind API",
     description="AI-powered industrial document intelligence platform with RAG",
     version="1.0.0",
     lifespan=lifespan,
@@ -92,11 +111,11 @@ app.include_router(voice.router, prefix="/api/voice", tags=["Voice"])
 async def health_check():
     return {
         "status": "healthy",
-        "service": "Industrial Knowledge Copilot",
+        "service": "FactoryMind",
         "version": "1.0.0",
     }
 
 
 @app.get("/", tags=["System"])
 async def root():
-    return {"message": "Industrial Knowledge Copilot API", "docs": "/api/docs"}
+    return {"message": "FactoryMind API", "docs": "/api/docs"}

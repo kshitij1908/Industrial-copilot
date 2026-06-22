@@ -1,4 +1,4 @@
-#  Industrial Knowledge Copilot
+#  FactoryMind
 
 > **AI-Powered Asset & Operations Brain** — Production-grade RAG platform for industrial document intelligence
 
@@ -13,7 +13,7 @@
 
 ## Overview
 
-The Industrial Knowledge Copilot enables engineers, operators, and field technicians to query enterprise industrial documents using natural language. Built on a **Multi-Agent Retrieval-Augmented Generation (RAG)** architecture with **Google Gemini 2.5 Flash** and **LangGraph orchestration**.
+The FactoryMind platform enables engineers, operators, and field technicians to query enterprise industrial documents using natural language. Built on a **Multi-Agent Retrieval-Augmented Generation (RAG)** architecture with **Google Gemini 2.5 Flash** and **LangGraph orchestration**.
 
 **Ask questions like:**
 - _"What is the startup procedure for Pump P-101?"_
@@ -151,7 +151,7 @@ Available at: **http://localhost:5173**
 ## Folder Structure
 
 ```
-industrial-copilot/
+factorymind/
 ├── frontend/
 │   ├── public/
 │   │   ├── manifest.json      # PWA web app manifest
@@ -195,7 +195,7 @@ Create `backend/.env` from `backend/.env.example`:
 GEMINI_API_KEY=your_gemini_api_key_here
 
 # Database
-DATABASE_URL=sqlite+aiosqlite:///./industrial_copilot.db
+DATABASE_URL=sqlite+aiosqlite:///./factorymind.db
 
 # Storage
 CHROMA_PERSIST_DIR=../storage/chromadb

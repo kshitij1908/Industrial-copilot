@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     llm_temperature: float = 0.1
 
     # Database
-    database_url: str = "sqlite+aiosqlite:///./industrial_copilot.db"
+    database_url: str = "sqlite+aiosqlite:///./factorymind.db"
 
     # Storage
     chroma_persist_dir: str = "../storage/chromadb"

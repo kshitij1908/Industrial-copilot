@@ -6,7 +6,7 @@
 
 Write-Host ""
 Write-Host "===============================================" -ForegroundColor Cyan
-Write-Host "  Industrial Knowledge Copilot - Frontend       " -ForegroundColor Cyan
+Write-Host "  FactoryMind - Frontend                        " -ForegroundColor Cyan
 Write-Host "===============================================" -ForegroundColor Cyan
 Write-Host ""
 

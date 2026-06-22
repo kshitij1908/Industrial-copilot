@@ -1,1 +1,1 @@
-"""Industrial Knowledge Copilot - FastAPI Application."""
+"""FactoryMind - FastAPI Application."""

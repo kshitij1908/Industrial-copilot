@@ -44,8 +44,8 @@ export function Sidebar() {
           />
         </div>
         <div>
-          <p className='text-sm font-bold text-[hsl(var(--foreground))] leading-none'>IK Copilot</p>
-          <p className='text-xs text-[hsl(var(--muted-foreground))] mt-0.5'>Industrial Knowledge</p>
+          <p className='text-sm font-bold text-[hsl(var(--foreground))] leading-none'>FactoryMind</p>
+          <p className='text-xs text-[hsl(var(--muted-foreground))] mt-0.5'>Industrial AI Brain</p>
         </div>
       </div>
 

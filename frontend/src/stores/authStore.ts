@@ -15,7 +15,7 @@ interface AuthState {
   logout: () => void
 }
 
-const STORAGE_KEY = 'industrial_copilot_auth'
+const STORAGE_KEY = 'factorymind_auth'
 
 function loadFromStorage(): { isAuthenticated: boolean; user: User | null } {
   try {

@@ -5,7 +5,7 @@ interface ThemeState {
   toggleTheme: () => void
 }
 
-const STORAGE_KEY = 'industrial_copilot_theme'
+const STORAGE_KEY = 'factorymind_theme'
 
 function loadTheme(): boolean {
   try {

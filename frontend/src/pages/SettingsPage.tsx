@@ -58,7 +58,7 @@ export default function SettingsPage() {
                 <div className="grid grid-cols-1 gap-6 pt-4 border-t border-[hsl(var(--border))]">
                   <div className="grid grid-cols-3 gap-4 items-center">
                     <label className="text-sm font-medium text-[hsl(var(--foreground))]">Application Name</label>
-                    <input type="text" disabled value="Industrial Knowledge Copilot" className="col-span-2 bg-[hsl(var(--muted))] border border-[hsl(var(--border))] rounded-md px-3 py-2 text-sm text-[hsl(var(--muted-foreground))]" />
+                    <input type="text" disabled value="FactoryMind" className="col-span-2 bg-[hsl(var(--muted))] border border-[hsl(var(--border))] rounded-md px-3 py-2 text-sm text-[hsl(var(--muted-foreground))]" />
                   </div>
                   <div className="grid grid-cols-3 gap-4 items-center">
                     <label className="text-sm font-medium text-[hsl(var(--foreground))]">Version</label>

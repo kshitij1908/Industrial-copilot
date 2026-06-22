@@ -9,10 +9,10 @@ from app.config import get_settings
 logger = logging.getLogger(__name__)
 settings = get_settings()
 
-_client: chromadb.PersistentClient | None = None
+_client = None
 
 
-def get_chroma_client() -> chromadb.PersistentClient:
+def get_chroma_client():
     """Return (or lazily create) the global ChromaDB PersistentClient singleton."""
     global _client
     if _client is None:

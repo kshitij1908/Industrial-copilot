@@ -1,4 +1,4 @@
-# 🏭 Industrial Knowledge Copilot
+#  Industrial Knowledge Copilot
 
 > **AI-Powered Asset & Operations Brain** — Production-grade RAG platform for industrial document intelligence
 

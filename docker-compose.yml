@@ -9,11 +9,11 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./storage:/app/storage
-      - ./backend/.env:/app/.env
+      - ./storage:/workspace/storage
+      - ./backend/.env:/workspace/.env
     environment:
-      - CHROMA_PERSIST_DIR=/app/storage/chromadb
-      - UPLOAD_DIR=/app/storage/uploads
+      - CHROMA_PERSIST_DIR=/workspace/storage/chromadb
+      - UPLOAD_DIR=/workspace/storage/uploads
     networks:
       - factorymind-network
     restart: unless-stopped

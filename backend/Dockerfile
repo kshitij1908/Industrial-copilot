@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-WORKDIR /app
+WORKDIR /workspace
 
 # Install system dependencies for EasyOCR (disabled to prevent Render mirror package resolution errors)
 # RUN apt-get update || true && apt-get install -y --no-install-recommends \
@@ -20,10 +20,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create storage directories
-RUN mkdir -p /app/storage/uploads /app/storage/chromadb
+RUN mkdir -p /workspace/storage/uploads /workspace/storage/chromadb
 
 # Set PYTHONPATH to ensure python finds the local app package first
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/workspace
 
 # Expose port
 EXPOSE 8000

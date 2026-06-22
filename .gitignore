@@ -46,7 +46,7 @@ logs/
 
 # ML models cache
 .cache/
-models/
+/models/
 
 # Debug scripts (dev only)
 backend/debug_vectorstore.py

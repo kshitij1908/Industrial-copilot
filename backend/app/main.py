@@ -34,7 +34,7 @@ async def lifespan(app: FastAPI):
     
     try:
         async with AsyncSessionLocal() as session:
-            result = await session.execute(select(User).limit(1))
+            result = await session.execute(select(User).where(User.username == "admin"))
             if not result.first():
                 admin_user = User(
                     username="admin",

@@ -34,9 +34,9 @@ export function Sidebar() {
   return (
     <div className='flex flex-col h-full'>
       {/* Logo */}
-      <div className='flex items-center gap-3 px-5 py-5 border-b border-slate-800'>
+      <div className='flex items-center gap-3 px-5 py-5 border-b border-[hsl(var(--border))]'>
         <div className='relative flex items-center justify-center w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/30'>
-          <Cog className='w-5 h-5 text-sky-400' />
+          <Cog className='w-5 h-5 text-sky-500' />
           <motion.div
             className='absolute inset-0 rounded-lg border border-sky-400/20'
             animate={{ opacity: [0.2, 0.6, 0.2] }}
@@ -44,14 +44,14 @@ export function Sidebar() {
           />
         </div>
         <div>
-          <p className='text-sm font-bold text-slate-100 leading-none'>IK Copilot</p>
-          <p className='text-xs text-slate-500 mt-0.5'>Industrial Knowledge</p>
+          <p className='text-sm font-bold text-[hsl(var(--foreground))] leading-none'>IK Copilot</p>
+          <p className='text-xs text-[hsl(var(--muted-foreground))] mt-0.5'>Industrial Knowledge</p>
         </div>
       </div>
 
       {/* Nav section label */}
       <div className='px-5 pt-5 pb-2'>
-        <p className='text-[10px] font-semibold uppercase tracking-widest text-slate-600'>Navigation</p>
+        <p className='text-[10px] font-semibold uppercase tracking-widest text-[hsl(var(--muted-foreground))]'>Navigation</p>
       </div>
 
       {/* Nav items */}
@@ -66,13 +66,13 @@ export function Sidebar() {
                   whileTap={{ scale: 0.98 }}
                   className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150 group cursor-pointer ${
                     isActive
-                      ? 'bg-sky-500/15 border-l-2 border-sky-400 text-sky-400 pl-[10px]'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 border-l-2 border-transparent'
+                      ? 'bg-sky-500/15 border-l-2 border-sky-400 text-sky-500 pl-[10px]'
+                      : 'text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] hover:bg-[hsl(var(--muted))] border-l-2 border-transparent'
                   }`}
                 >
                   <Icon
                     className={`w-4.5 h-4.5 shrink-0 transition-colors ${
-                      isActive ? 'text-sky-400' : 'text-slate-500 group-hover:text-slate-300'
+                      isActive ? 'text-sky-500' : 'text-[hsl(var(--muted-foreground))] group-hover:text-[hsl(var(--foreground))]'
                     }`}
                     size={18}
                   />
@@ -89,7 +89,7 @@ export function Sidebar() {
 
       {/* System status */}
       <div className='px-4 py-3'>
-        <div className='rounded-lg bg-slate-800/50 border border-slate-700/50 p-3'>
+        <div className='rounded-lg bg-[hsl(var(--muted))] border border-[hsl(var(--border))] p-3'>
           <div className='flex items-center gap-2 mb-2'>
             <div className='w-1.5 h-1.5 rounded-full bg-emerald-400'>
               <motion.div
@@ -98,24 +98,24 @@ export function Sidebar() {
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </div>
-            <span className='text-xs text-emerald-400 font-medium'>System Online</span>
+            <span className='text-xs text-emerald-500 font-medium'>System Online</span>
           </div>
-          <p className='text-[10px] text-slate-500'>Gemini 2.5 Flash • Active</p>
+          <p className='text-[10px] text-[hsl(var(--muted-foreground))]'>Gemini 2.5 Flash • Active</p>
         </div>
       </div>
 
       {/* User section */}
-      <div className='px-3 py-3 border-t border-slate-800'>
-        <div className='flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-slate-800/50 transition-colors'>
+      <div className='px-3 py-3 border-t border-[hsl(var(--border))]'>
+        <div className='flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[hsl(var(--muted))] transition-colors'>
           {/* Avatar */}
           <div className='relative w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0'>
             {user?.username?.[0]?.toUpperCase() ?? 'U'}
           </div>
           <div className='flex-1 min-w-0'>
-            <p className='text-xs font-semibold text-slate-200 truncate'>
+            <p className='text-xs font-semibold text-[hsl(var(--foreground))] truncate'>
               {user?.username ?? 'User'}
             </p>
-            <p className='text-[10px] text-slate-500 truncate capitalize'>
+            <p className='text-[10px] text-[hsl(var(--muted-foreground))] truncate capitalize'>
               {user?.role ?? 'Operator'}
             </p>
           </div>
@@ -123,7 +123,7 @@ export function Sidebar() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleLogout}
-            className='p-1.5 text-slate-500 hover:text-red-400 hover:bg-red-500/10 rounded-md transition-colors'
+            className='p-1.5 text-[hsl(var(--muted-foreground))] hover:text-red-500 hover:bg-red-500/10 rounded-md transition-colors'
             title='Logout'
           >
             <LogOut size={14} />

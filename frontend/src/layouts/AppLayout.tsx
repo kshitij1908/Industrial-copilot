@@ -5,9 +5,9 @@ import { MobileNav } from '../components/layout/MobileNav'
 
 export function AppLayout() {
   return (
-    <div className='flex h-screen bg-slate-950 text-slate-100 overflow-hidden'>
+    <div className='flex h-screen bg-[hsl(var(--background))] text-[hsl(var(--foreground))] overflow-hidden transition-colors duration-300'>
       {/* Desktop Sidebar */}
-      <aside className='hidden md:flex flex-col w-64 shrink-0 bg-slate-900/95 border-r border-slate-800 overflow-y-auto overflow-x-hidden'>
+      <aside className='hidden md:flex flex-col w-64 shrink-0 bg-[hsl(var(--card))] border-r border-[hsl(var(--border))] overflow-y-auto overflow-x-hidden transition-colors duration-300'>
         <Sidebar />
       </aside>
 

@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+.env
+
+# Node
+node_modules/
+.cache/
+frontend/dist/
+
+# Storage (user data - not committed)
+storage/uploads/*
+storage/chromadb/*
+!storage/uploads/.gitkeep
+!storage/chromadb/.gitkeep
+
+# Database (runtime state - not committed)
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# ML models cache
+.cache/
+models/
+
+# Debug scripts (dev only)
+backend/debug_vectorstore.py
+backend/check_state.py
+backend/reseed_documents.py
+
+# Test artifacts
+.pytest_cache/
+htmlcov/
+.coverage

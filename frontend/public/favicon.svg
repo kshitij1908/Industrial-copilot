@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#0f172a"/>
+  <!-- Gear outer -->
+  <circle cx="16" cy="16" r="10" stroke="#0ea5e9" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Gear teeth -->
+  <rect x="14.5" y="3" width="3" height="4" rx="1" fill="#0ea5e9"/>
+  <rect x="14.5" y="25" width="3" height="4" rx="1" fill="#0ea5e9"/>
+  <rect x="3" y="14.5" width="4" height="3" rx="1" fill="#0ea5e9"/>
+  <rect x="25" y="14.5" width="4" height="3" rx="1" fill="#0ea5e9"/>
+  <!-- Diagonal teeth -->
+  <rect x="6.5" y="5.5" width="3" height="4" rx="1" fill="#0ea5e9" transform="rotate(45 8 7.5)"/>
+  <rect x="22.5" y="5.5" width="3" height="4" rx="1" fill="#0ea5e9" transform="rotate(-45 24 7.5)"/>
+  <rect x="6.5" y="22.5" width="3" height="4" rx="1" fill="#0ea5e9" transform="rotate(-45 8 24.5)"/>
+  <rect x="22.5" y="22.5" width="3" height="4" rx="1" fill="#0ea5e9" transform="rotate(45 24 24.5)"/>
+  <!-- Inner circle -->
+  <circle cx="16" cy="16" r="5" fill="#0ea5e9" opacity="0.2"/>
+  <circle cx="16" cy="16" r="3" fill="#0ea5e9"/>
+</svg>
